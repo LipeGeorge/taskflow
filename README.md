@@ -171,4 +171,4 @@ URGENT
 
 ## Aprendizado
 
-Durante o desenvolvimento deste projeto, estou tendo a oportunidade de ter contato com diversas ferramentas da stack que só conhecia teoricamente, como o Flyway e Docker, por exemplo.
+[Será preenchida após a conclusão da primeira versão da aplicação.]
