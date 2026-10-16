@@ -1,6 +1,8 @@
 package com.taskflow.TaskFlow.Entity;
 
+import com.taskflow.TaskFlow.controller.dto.LoginRequest;
 import jakarta.persistence.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.Instant;
 import java.util.Set;
@@ -102,4 +104,9 @@ public class User {
     public void setUpdatedAt(Instant updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    public Boolean isLoginCorrect(LoginRequest loginRequest, PasswordEncoder passwordEncoder){
+        return passwordEncoder.matches(loginRequest.password(), this.password);
+    }
+
 }
