@@ -1,11 +1,12 @@
-package com.taskflow.TaskFlow.Entity;
+package com.taskflow.TaskFlow.entity;
 
-import com.taskflow.TaskFlow.Entity.enums.Priority;
-import com.taskflow.TaskFlow.Entity.enums.Status;
 import jakarta.persistence.*;
 
 import java.time.Instant;
 import java.util.Set;
+
+import com.taskflow.TaskFlow.entity.enums.Priority;
+import com.taskflow.TaskFlow.entity.enums.Status;
 
 @Entity
 @Table(name = "tb_task")

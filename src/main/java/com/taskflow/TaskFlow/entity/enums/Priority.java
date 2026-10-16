@@ -1,4 +1,4 @@
-package com.taskflow.TaskFlow.Entity.enums;
+package com.taskflow.TaskFlow.entity.enums;
 
 public enum Priority {
     LOW,

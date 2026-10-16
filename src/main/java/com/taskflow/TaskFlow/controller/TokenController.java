@@ -1,8 +1,9 @@
 package com.taskflow.TaskFlow.controller;
 
-import com.taskflow.TaskFlow.Repository.UserRepository;
 import com.taskflow.TaskFlow.controller.dto.LoginRequest;
 import com.taskflow.TaskFlow.controller.dto.LoginResponse;
+import com.taskflow.TaskFlow.repository.UserRepository;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -30,7 +31,8 @@ public class TokenController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest){
-        var user = userRepository.findByEmail((loginRequest.email());
+
+        var user = userRepository.findByEmail(loginRequest.email());
 
         if(user.isEmpty() || !user.get().isLoginCorrect(loginRequest, bCryptPasswordEncoder)){
             throw new BadCredentialsException("user or password is invalid");
